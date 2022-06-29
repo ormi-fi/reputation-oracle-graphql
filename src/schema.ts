@@ -19,9 +19,14 @@ const typeDefs = gql`
     userIsActive: Boolean!
   }
 
+  type GitcoinPassport {
+    something: String
+  }
+
   type Query {
     accountActivities(address: String!, chain: String!): AccountActivitiesResponse
     erc20Balances(address: String!, chain: String!): [Erc20BalanceResponse]
+    gitcoinPassport(address: String!): GitcoinPassport
   }
 `;
 
@@ -34,6 +39,9 @@ const resolvers: IResolvers = {
     erc20Balances(_, { address, chain }, { dataSources }) {
       return dataSources.moralisAPI.erc20Balances(address, chain);
     },
+    gitcoinPassport(_, { address }, { dataSources }) {
+      return dataSources.gitcoinPassportAPI.getPassport(address);
+    }
   },
 };
 

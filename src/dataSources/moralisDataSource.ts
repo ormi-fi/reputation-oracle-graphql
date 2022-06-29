@@ -104,6 +104,5 @@ export class MoralisAPI extends DataSource {
   };
 }
 
-const moralisAPI = new MoralisAPI();
+export const moralisAPI = new MoralisAPI();
 
-export const dataSources = () => ({ moralisAPI });
