@@ -7,6 +7,8 @@
     "start": "ts-node src/index.ts"
   },
   "dependencies": {
+    "tulons": "https://github.com/ltyu/tulons-ts",
+    "@gitcoinco/passport-sdk-reader": "^0.1.1",
     "apollo-datasource": "^3.3.2",
     "apollo-datasource-rest": "^0.9.4",
     "apollo-server": "^2.18.1",
