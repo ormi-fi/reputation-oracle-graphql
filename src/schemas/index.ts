@@ -1,27 +1,13 @@
 import { gql, IResolvers, makeExecutableSchema } from 'apollo-server';
+import GraphQLJSON from 'graphql-type-json';
+import PassportSchema from './passportSchema';
+import MoralisSchema from './moralisSchema';
 
 const typeDefs = gql`
-  type Erc20BalanceResponse {
-    symbol: String
-    name: String
-    balance: Float
-    price: Float
-    value: Float
-    token_address: String
-    logo: String
-  }
-
-  type AccountActivitiesResponse {
-    transactionsPerMonth: Float!
-    activeBuyerSeller: Boolean!
-    monthsSinceFirstTransaction: Int!
-    existedLongEnough: Boolean!
-    userIsActive: Boolean!
-  }
-
-  type GitcoinPassport {
-    something: String
-  }
+  scalar JSON
+  
+  ${PassportSchema}
+  ${MoralisSchema}
 
   type Query {
     accountActivities(address: String!, chain: String!): AccountActivitiesResponse
@@ -31,6 +17,7 @@ const typeDefs = gql`
 `;
 
 const resolvers: IResolvers = {
+  JSON: GraphQLJSON,
   Query: {
     accountActivities(_, { address, chain }, { dataSources }) {
       return dataSources.moralisAPI.accountActivities(address, chain);

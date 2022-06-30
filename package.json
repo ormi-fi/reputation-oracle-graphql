@@ -8,7 +8,6 @@
     "start": "ts-node src/index.ts"
   },
   "dependencies": {
-    "tulons": "https://github.com/ltyu/tulons-ts",
     "@gitcoinco/passport-sdk-reader": "^0.1.1",
     "apollo-datasource": "^3.3.2",
     "apollo-datasource-rest": "^0.9.4",
@@ -16,8 +15,10 @@
     "camelcase-keys": "^6.2.2",
     "dotenv": "^16.0.1",
     "graphql": "^15.3.0",
+    "graphql-type-json": "^0.3.2",
     "moralis": "^1.8.0",
     "ts-node": "^10.8.1",
+    "tulons": "https://github.com/ltyu/tulons-ts",
     "typescript": "^4.7.4"
   },
   "devDependencies": {

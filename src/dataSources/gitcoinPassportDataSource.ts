@@ -14,10 +14,7 @@ class GitcoinPassportAPI extends DataSource {
 
     // Gets the fully hydrated passport. Returns false if no data
     getPassport = async (ethereumAddress: string): Promise<CeramicPassportStream | CeramicPassportRecord | false> => {
-        const passport = await this.reader.getPassport(ethereumAddress);
-        console.log('passport', passport);
-        // TODO will
-        return passport;
+        return await this.reader.getPassport(ethereumAddress);
     }
 }
 

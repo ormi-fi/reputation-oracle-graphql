@@ -1,5 +1,5 @@
 import { ApolloServer } from 'apollo-server'
-import { schema } from './schema'
+import { schema } from './schemas'
 import { dataSources } from './dataSources'
 require('dotenv').config()
 
