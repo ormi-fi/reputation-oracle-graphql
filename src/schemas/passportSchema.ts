@@ -1,5 +1,10 @@
 import { gql } from "apollo-server";
 
+/*
+ * Schema created from
+ * https://cerscan.com/mainnet/stream/k3y52l7qbv1frynp3s4v5z0a9wrolxl7kjmbvj19jl9mck442dbtbnwqes5irx3pc
+ * https://cerscan.com/mainnet/stream/k3y52l7qbv1frydjk40z9wgf1snwf6axdpc32svgu2jpxrmptldj8rroq2n6a2a68
+ */
 export default gql`
   type Proof {
     jws: String
