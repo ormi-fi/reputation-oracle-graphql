@@ -65,5 +65,30 @@ query {
       token_address
       logo
   }
+
+  gitcoinPassport (address: $address) {
+    issuanceDate
+    expiryDate
+    stamps {
+      provider
+      credential {
+        type
+        credentialSubject {
+          id
+          hash
+          address
+          provider
+          challenge
+        }
+        proof {
+          jws
+          type
+          created
+          proofPurpose
+          verificationMethod
+        }
+      }
+    }
+  }
 }
 ```
