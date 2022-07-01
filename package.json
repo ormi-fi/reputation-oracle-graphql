@@ -4,17 +4,25 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "dev": "nodemon src/index.ts",
     "start": "ts-node src/index.ts"
   },
   "dependencies": {
+    "@gitcoinco/passport-sdk-reader": "^0.1.1",
     "apollo-datasource": "^3.3.2",
     "apollo-datasource-rest": "^0.9.4",
     "apollo-server": "^2.18.1",
     "camelcase-keys": "^6.2.2",
     "dotenv": "^16.0.1",
     "graphql": "^15.3.0",
+    "graphql-type-json": "^0.3.2",
     "moralis": "^1.8.0",
-    "ts-node": "^9.0.0",
-    "typescript": "^4.0.3"
+    "ts-node": "^10.8.1",
+    "tulons": "https://github.com/ltyu/tulons-ts",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@gitcoinco/passport-sdk-types": "^0.1.1",
+    "nodemon": "^2.0.18"
   }
 }
