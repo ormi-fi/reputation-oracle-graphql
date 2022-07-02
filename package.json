@@ -18,7 +18,7 @@
     "graphql-type-json": "^0.3.2",
     "moralis": "^1.8.0",
     "ts-node": "^10.8.1",
-    "tulons": "https://github.com/ltyu/tulons-ts",
+    "tulons": "https://github.com/ormi-fi/tulons-ts",
     "typescript": "^4.7.4"
   },
   "devDependencies": {
