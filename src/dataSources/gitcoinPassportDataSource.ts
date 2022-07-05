@@ -3,7 +3,7 @@ import { Passport } from '@gitcoinco/passport-sdk-types';
 import { DataSource } from 'apollo-datasource';
 import 'dotenv/config';
 
-const ceramicNodeUrl = process.env.CERAMIC_NODE_URL;
+const ceramicNodeUrl = process.env.CERAMIC_NODE_URL || '';
 const ceramicNetwork = '1'; // Single network. Hardcoded for now.
 
 class GitcoinPassportAPI extends DataSource { 

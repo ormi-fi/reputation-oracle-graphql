@@ -37,7 +37,7 @@ const getErc20TokenBalances = async (address: string, chain: MoralisChainOptions
       console.log(err);
       return null;
     });
-  console.log('Fetched all ERC20 balances for chain: %s, number of tokens: %s', chain, tokens.length);
+  console.log('Fetched all ERC20 balances for chain: %s, number of tokens: %s', chain, tokens ? tokens.length : 0);
 
   if (tokens === null || tokens.length === 0) return null;
 
@@ -105,4 +105,3 @@ export class MoralisAPI extends DataSource {
 }
 
 export const moralisAPI = new MoralisAPI();
-
