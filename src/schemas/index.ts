@@ -1,4 +1,5 @@
-import { gql, IResolvers, makeExecutableSchema } from 'apollo-server';
+import { gql } from 'apollo-server';
+import { IResolvers, makeExecutableSchema } from 'graphql-tools';
 import GraphQLJSON from 'graphql-type-json';
 import PassportSchema from './passportSchema';
 import MoralisSchema from './moralisSchema';
