@@ -10,13 +10,14 @@
   },
   "dependencies": {
     "@gitcoinco/passport-sdk-reader": "^0.1.2",
+    "@graphql-tools/schema": "^8.5.0",
+    "@graphql-tools/utils": "^8.8.0",
     "apollo-datasource": "^3.3.2",
     "apollo-server": "^3.9.0",
     "apollo-server-core": "^3.9.0",
     "camelcase-keys": "^6.2.2",
     "dotenv": "^16.0.1",
     "graphql": "^15.3.0",
-    "graphql-tools": "4.x",
     "graphql-type-json": "^0.3.2",
     "moralis": "^1.8.0",
     "tulons": "^0.0.6"
