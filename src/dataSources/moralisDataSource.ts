@@ -1,7 +1,7 @@
 import { DataSource } from 'apollo-datasource';
 import { DataSourceConfig, WalletBalance, MoralisChainOptions, Erc20TokenBalance, ActivityInfo } from '../type';
 import Moralis from 'moralis/node';
-import 'dotenv/config'
+import 'dotenv/config';
 
 const serverUrl = process.env.MORALIS_SERVER_URL;
 const appId = process.env.MORALIS_APP_ID;
